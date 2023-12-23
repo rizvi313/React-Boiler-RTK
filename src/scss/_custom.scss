@@ -1,0 +1,31 @@
+// Here you can add other styles
+.login-bg-image {
+    background-image: url('../assets/brand/genx-logo.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for readability */
+  }
+
+.table .table-primary-base {
+  background-color: #032032;
+  color: #ffffff;
+}
+.custom-card-color {
+  background-color: #39d790 !important;
+  color: #ffffff;
+
+}
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.page-number {
+  margin: 0 0px;
+  cursor: pointer;
+}
+
+.page-number.active {
+  font-weight: bold;
+}
