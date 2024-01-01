@@ -5,7 +5,7 @@ import { CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/r
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import logoBg from 'src/assets/brand/genx-logo-bg-1.png'
+import logoBg from 'src/assets/brand/logo.png'
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'

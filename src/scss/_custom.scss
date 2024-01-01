@@ -1,9 +1,11 @@
 // Here you can add other styles
 .login-bg-image {
-    background-image: url('../assets/brand/genx-logo.jpeg');
+    background-image: url('../assets/brand/logo.png');
     background-size: cover;
     background-position: center;
     color: white; /* Adjust text color for readability */
+    background-color: #032032;
+    object-fit: contain;
   }
 
 .table .table-primary-base {
