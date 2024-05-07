@@ -23,7 +23,10 @@ const logout = async () => {
 
 const dummyLogin = async (credentials) => {
   if (credentials?.username === 'admin' && credentials?.password === 'admin') {
-    return { user: { username: 'admin', password: 'admin' } }
+    return {
+      user: { username: 'admin', password: 'admin' },
+      scopes: ['DASHBOARD', 'MISSING_A_LIST', 'MISSING_A_EDIT'],
+    }
   }
   throw new Error('Invalid credentials') // Throw an error for the "else" case
 }

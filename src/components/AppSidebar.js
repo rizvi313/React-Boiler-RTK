@@ -9,7 +9,8 @@ import logoBg from 'src/assets/brand/logo.png'
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
-
+// import routes from '../routes'
+import { filterNavItems } from 'src/utils/navigationConfig'
 // sidebar nav config
 import navigation from '../_nav'
 
@@ -17,6 +18,9 @@ const AppSidebar = () => {
   const dispatch = useDispatch()
   const unfoldable = useSelector((state) => state.sidebarUnfoldable)
   const sidebarShow = useSelector((state) => state.sidebarShow)
+  const { user } = useSelector((state) => state.auth)
+
+  const userNavItems = filterNavItems(navigation, user?.scopes)
 
   return (
     <CSidebar
@@ -33,7 +37,7 @@ const AppSidebar = () => {
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>
-          <AppSidebarNav items={navigation} />
+          <AppSidebarNav items={userNavItems} />
         </SimpleBar>
       </CSidebarNav>
       <CSidebarToggler

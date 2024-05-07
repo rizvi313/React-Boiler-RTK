@@ -4,13 +4,18 @@ import { CContainer, CSpinner } from '@coreui/react'
 
 // routes config
 import routes from '../routes'
+import { filterRoutes } from 'src/utils/navigationConfig'
+import { useSelector } from 'react-redux'
 
 const AppContent = () => {
+  const { user } = useSelector((state) => state.auth)
+  const userRoutes = filterRoutes(routes, user?.scopes)
+  console.debug('userRoutes', userRoutes, 'route', routes, 'user', user)
   return (
     <CContainer lg>
       <Suspense fallback={<CSpinner color="primary" />}>
         <Routes>
-          {routes.map((route, idx) => {
+          {userRoutes.map((route, idx) => {
             return (
               route.element && (
                 <Route
